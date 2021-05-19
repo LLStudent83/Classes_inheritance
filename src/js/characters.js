@@ -1,3 +1,4 @@
+// eslint-disable-next-line max-classes-per-file
 export default class Character {
   constructor(name, type) {
     if (name.length < 2 || name.length > 10) {
@@ -45,3 +46,22 @@ export default class Character {
 
 const bowman = new Character('dow', 'Bowman');
 console.log(bowman);
+
+class Bowerman extends Character {}
+class Swordsman extends Character {}
+class Magician extends Character {}
+class Daemon extends Character {}
+class Undead extends Character {}
+class Zombie extends Character {}
+
+const bowerman = new Bowerman('dow', 'Bowman');
+
+const swordsman = new Bowerman('swo', 'Swordsman');
+
+const magician = new Bowerman('mag', 'Magician');
+
+const daemon = new Bowerman('doem', 'Daemon');
+
+const undead = new Bowerman('und', 'Undead');
+
+const zombie = new Bowerman('dow', 'Zombie');

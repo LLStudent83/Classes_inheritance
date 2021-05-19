@@ -16,5 +16,6 @@
     //   "error", "windows"
     // ],
     "linebreak-style": 0
+    //"extends": "eslint:recommended"
   }
 }
