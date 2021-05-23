@@ -14,54 +14,64 @@ export default class Character {
     this.type = type;
     this.helse = 100;
     this.level = 1;
-
-    const objAttack = {
-      Bowman: 25,
-      Swordsman: 40,
-      Magician: 10,
-      Undead: 25,
-      Zombie: 40,
-      Daemon: 10,
-    };
-    for (const item in objAttack) {
-      if (item === this.type) {
-        this.attack = objAttack[item];
-      }
-    }
-    const objDefence = {
-      Bowman: 25,
-      Swordsman: 10,
-      Magician: 40,
-      Undead: 25,
-      Zombie: 10,
-      Daemon: 40,
-    };
-    for (const item in objDefence) {
-      if (item === this.type) {
-        this.defence = objDefence[item];
-      }
-    }
   }
 }
 
-const bowman = new Character('dow', 'Bowman');
+
+class Bowman extends Character {
+  constructor(name, type) {
+    super(name, type);
+    this.attack = 25;
+    this.defence = 25;
+  }
+}
+class Swordsman extends Character {
+  constructor(name, type) {
+    super(name, type);
+    this.attack = 40;
+    this.defence = 10;
+  }
+}
+class Magician extends Character {
+  constructor(name, type) {
+    super(name, type);
+    this.attack = 10;
+    this.defence = 40;
+  }
+}
+class Daemon extends Character {
+  constructor(name, type) {
+    super(name, type);
+    this.attack = 10;
+    this.defence = 40;
+  }
+}
+class Undead extends Character {
+  constructor(name, type) {
+    super(name, type);
+    this.attack = 25;
+    this.defence = 25;
+  }
+}
+class Zombie extends Character {
+  constructor(name, type) {
+    super(name, type);
+    this.attack = 40;
+    this.defence = 10;
+  }
+}
+
+const bowman = new Bowman('dow', 'Bowman');
+
+const swordsman = new Swordsman('swo', 'Swordsman');
+
+const magician = new Magician('mag', 'Magician');
+
+const daemon = new Daemon('doem', 'Daemon');
+
+const undead = new Undead('und', 'Undead');
+
+const zombie = new Zombie('dow', 'Zombie');
+
+
 console.log(bowman);
-
-class Bowerman extends Character {}
-class Swordsman extends Character {}
-class Magician extends Character {}
-class Daemon extends Character {}
-class Undead extends Character {}
-class Zombie extends Character {}
-
-const bowerman = new Bowerman('dow', 'Bowman');
-
-const swordsman = new Bowerman('swo', 'Swordsman');
-
-const magician = new Bowerman('mag', 'Magician');
-
-const daemon = new Bowerman('doem', 'Daemon');
-
-const undead = new Bowerman('und', 'Undead');
-
-const zombie = new Bowerman('dow', 'Zombie');
